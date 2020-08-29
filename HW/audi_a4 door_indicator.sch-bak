@@ -1,0 +1,589 @@
+EESchema Schematic File Version 5
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+$Comp
+L arduino:arduino_mini U1
+U 1 1 5DCE37E4
+P 8790 4000
+F 0 "U1" H 9290 2450 70  0000 C CNN
+F 1 "arduino_mini" H 9390 2300 70  0000 C CNN
+F 2 "DIL20" H 9340 2100 60  0000 C CNN
+F 3 "" H 8790 4000 50  0001 C CNN
+	1    8790 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L diode:DIODE D1
+U 1 1 5DCE5917
+P 1670 2810
+F 0 "D1" V 1616 2888 60  0000 L CNN
+F 1 "1N4148" H 1520 2660 60  0000 L CNN
+F 2 "" H 1670 2810 50  0001 C CNN
+F 3 "" H 1670 2810 50  0001 C CNN
+	1    1670 2810
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5DCF1E1B
+P 8790 5900
+F 0 "#PWR07" H 8790 5650 50  0001 C CNN
+F 1 "GND" H 8795 5727 50  0000 C CNN
+F 2 "" H 8790 5900 50  0001 C CNN
+F 3 "" H 8790 5900 50  0001 C CNN
+	1    8790 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8790 5550 8790 5900
+$Comp
+L diode:DIODE D2
+U 1 1 5DCF86CB
+P 2470 2860
+F 0 "D2" V 2416 2938 60  0000 L CNN
+F 1 "1N4148" H 2320 2710 60  0000 L CNN
+F 2 "" H 2470 2860 50  0001 C CNN
+F 3 "" H 2470 2860 50  0001 C CNN
+	1    2470 2860
+	0    1    1    0   
+$EndComp
+$Comp
+L diode:DIODE D3
+U 1 1 5DCF8964
+P 2970 2860
+F 0 "D3" V 2916 2938 60  0000 L CNN
+F 1 "1N4148" H 2820 2710 60  0000 L CNN
+F 2 "" H 2970 2860 50  0001 C CNN
+F 3 "" H 2970 2860 50  0001 C CNN
+	1    2970 2860
+	0    1    1    0   
+$EndComp
+$Comp
+L diode:DIODE D4
+U 1 1 5DCF8F78
+P 3470 2860
+F 0 "D4" V 3416 2938 60  0000 L CNN
+F 1 "1N4148" H 3320 2710 60  0000 L CNN
+F 2 "" H 3470 2860 50  0001 C CNN
+F 3 "" H 3470 2860 50  0001 C CNN
+	1    3470 2860
+	0    1    1    0   
+$EndComp
+$Comp
+L diode:DIODE D5
+U 1 1 5DCF9298
+P 3970 2860
+F 0 "D5" V 3916 2938 60  0000 L CNN
+F 1 "1N4148" H 3820 2710 60  0000 L CNN
+F 2 "" H 3970 2860 50  0001 C CNN
+F 3 "" H 3970 2860 50  0001 C CNN
+	1    3970 2860
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3970 2660 3970 1860
+Wire Wire Line
+	3470 2660 3470 1860
+Wire Wire Line
+	2970 2660 2970 1860
+Wire Wire Line
+	2470 2660 2470 1860
+Wire Wire Line
+	1670 2610 1670 1810
+$Comp
+L gencon:CONN_1 CON5
+U 1 1 5DCEB25F
+P 3970 1460
+F 0 "CON5" V 4220 1560 60  0000 R CNN
+F 1 "10PurpleLeftA_pin5" H 4395 1660 60  0000 R CNN
+F 2 "" H 3970 1460 50  0001 C CNN
+F 3 "" H 3970 1460 50  0001 C CNN
+	1    3970 1460
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gencon:CONN_1 CON2
+U 1 1 5DD088E8
+P 2470 1460
+F 0 "CON2" V 2670 1360 60  0000 L CNN
+F 1 "15BbrownRightA_pin7" H 1970 1710 60  0000 L CNN
+F 2 "" H 2470 1460 50  0001 C CNN
+F 3 "" H 2470 1460 50  0001 C CNN
+	1    2470 1460
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gencon:CONN_1 CON3
+U 1 1 5DD09A59
+P 2970 1460
+F 0 "CON3" V 3170 1335 60  0000 L CNN
+F 1 "15BlackRightA_pin13" H 2495 1635 60  0000 L CNN
+F 2 "" H 2970 1460 50  0001 C CNN
+F 3 "" H 2970 1460 50  0001 C CNN
+	1    2970 1460
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gencon:CONN_1 CON4
+U 1 1 5DD09ABB
+P 3470 1460
+F 0 "CON4" V 3670 1360 60  0000 L CNN
+F 1 "15BlackRightA_pin12" H 3020 1685 60  0000 L CNN
+F 2 "" H 3470 1460 50  0001 C CNN
+F 3 "" H 3470 1460 50  0001 C CNN
+	1    3470 1460
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gencon:CONN_1 CON1
+U 1 1 5DD09B08
+P 1670 1410
+F 0 "CON1" V 1920 1310 60  0000 L CNN
+F 1 "15BrownLeftA_pin8" H 1220 1660 60  0000 L CNN
+F 2 "" H 1670 1410 50  0001 C CNN
+F 3 "" H 1670 1410 50  0001 C CNN
+	1    1670 1410
+	0    -1   -1   0   
+$EndComp
+$Comp
+L tinkerforge:SPST SW1
+U 1 1 5DD15F19
+P 1670 6160
+F 0 "SW1" V 1716 6082 50  0000 R CNN
+F 1 "DRIVER" H 1770 6310 50  0000 R CNN
+F 2 "" H 1670 6160 50  0000 C CNN
+F 3 "" H 1670 6160 50  0000 C CNN
+	1    1670 6160
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5DD16D98
+P 1670 6860
+F 0 "#PWR01" H 1670 6610 50  0001 C CNN
+F 1 "GND" H 1675 6687 50  0000 C CNN
+F 2 "" H 1670 6860 50  0001 C CNN
+F 3 "" H 1670 6860 50  0001 C CNN
+	1    1670 6860
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1670 6860 1670 6660
+Wire Wire Line
+	2470 6910 2470 6710
+$Comp
+L tinkerforge:SPST SW2
+U 1 1 5DD172A0
+P 2470 6210
+F 0 "SW2" V 2516 6132 50  0000 R CNN
+F 1 "PASSENGER" H 2670 6360 50  0000 R CNN
+F 2 "" H 2470 6210 50  0000 C CNN
+F 3 "" H 2470 6210 50  0000 C CNN
+	1    2470 6210
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5DD172B2
+P 2470 6910
+F 0 "#PWR02" H 2470 6660 50  0001 C CNN
+F 1 "GND" H 2475 6737 50  0000 C CNN
+F 2 "" H 2470 6910 50  0001 C CNN
+F 3 "" H 2470 6910 50  0001 C CNN
+	1    2470 6910
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2970 6910 2970 6710
+$Comp
+L tinkerforge:SPST SW3
+U 1 1 5DD18AD7
+P 2970 6210
+F 0 "SW3" V 3016 6132 50  0000 R CNN
+F 1 "REAR LEFT" H 3120 6360 50  0000 R CNN
+F 2 "" H 2970 6210 50  0000 C CNN
+F 3 "" H 2970 6210 50  0000 C CNN
+	1    2970 6210
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5DD18AE9
+P 2970 6910
+F 0 "#PWR03" H 2970 6660 50  0001 C CNN
+F 1 "GND" H 2975 6737 50  0000 C CNN
+F 2 "" H 2970 6910 50  0001 C CNN
+F 3 "" H 2970 6910 50  0001 C CNN
+	1    2970 6910
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3470 6910 3470 6710
+$Comp
+L tinkerforge:SPST SW4
+U 1 1 5DD18DDD
+P 3470 6210
+F 0 "SW4" V 3516 6132 50  0000 R CNN
+F 1 "REAR RIGHT" H 3620 6360 50  0000 R CNN
+F 2 "" H 3470 6210 50  0000 C CNN
+F 3 "" H 3470 6210 50  0000 C CNN
+	1    3470 6210
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3470 5710 3470 5135
+$Comp
+L power:GND #PWR04
+U 1 1 5DD18DEF
+P 3470 6910
+F 0 "#PWR04" H 3470 6660 50  0001 C CNN
+F 1 "GND" H 3475 6737 50  0000 C CNN
+F 2 "" H 3470 6910 50  0001 C CNN
+F 3 "" H 3470 6910 50  0001 C CNN
+	1    3470 6910
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3970 6910 3970 6710
+$Comp
+L tinkerforge:SPST SW5
+U 1 1 5DD19383
+P 3970 6210
+F 0 "SW5" V 4016 6132 50  0000 R CNN
+F 1 "TRUNK" H 4070 6360 50  0000 R CNN
+F 2 "" H 3970 6210 50  0000 C CNN
+F 3 "" H 3970 6210 50  0000 C CNN
+	1    3970 6210
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3970 5710 3970 5610
+$Comp
+L power:GND #PWR05
+U 1 1 5DD19395
+P 3970 6910
+F 0 "#PWR05" H 3970 6660 50  0001 C CNN
+F 1 "GND" H 3975 6737 50  0000 C CNN
+F 2 "" H 3970 6910 50  0001 C CNN
+F 3 "" H 3970 6910 50  0001 C CNN
+	1    3970 6910
+	1    0    0    -1  
+$EndComp
+Text Notes 2420 3460 3    50   ~ 0
+brown/white
+Text Notes 2420 2060 3    50   ~ 0
+brown/white
+Text Notes 2920 3410 3    50   ~ 0
+brown/green
+Text Notes 2920 2010 3    50   ~ 0
+brown/green
+Text Notes 3420 3410 3    50   ~ 0
+brown/purple
+Text Notes 3420 2010 3    50   ~ 0
+brown/purple
+Text Notes 3920 3460 3    50   ~ 0
+white/yellow
+Text Notes 3920 2060 3    50   ~ 0
+white/yellow
+Text Notes 1570 2060 3    50   ~ 0
+brown/yellow
+Text Notes 1545 3360 3    50   ~ 0
+brown/yellow
+Connection ~ 1670 4110
+Wire Wire Line
+	1670 4110 1670 3010
+Wire Wire Line
+	1670 5660 1670 4110
+Connection ~ 2470 4460
+Wire Wire Line
+	2470 4460 2470 3060
+Wire Wire Line
+	2470 5710 2470 4460
+Connection ~ 2970 4835
+Wire Wire Line
+	2970 4835 2970 3060
+Wire Wire Line
+	2970 5710 2970 4835
+Connection ~ 3470 5135
+Wire Wire Line
+	3470 5135 3470 3060
+Connection ~ 3970 5610
+Wire Wire Line
+	3970 5610 3970 3060
+Text Label 5170 5610 2    50   ~ 0
+TRUNK
+Text Label 5195 5135 2    50   ~ 0
+REAR_RIGHT
+Text Label 5195 4835 2    50   ~ 0
+REAR_LEFT
+Text Label 5195 4460 2    50   ~ 0
+PASSANGER
+Text Label 5195 4110 2    50   ~ 0
+DRIVER
+Wire Wire Line
+	4145 4110 4145 3785
+Connection ~ 4145 4110
+Wire Wire Line
+	4145 4110 1670 4110
+$Comp
+L gencon:CONN_1 CON6
+U 1 1 5DCDB61A
+P 4145 3385
+F 0 "CON6" V 4395 3285 60  0000 L CNN
+F 1 "(ALT)15BrownRightA_pin8" H 3770 3235 60  0000 L CNN
+F 2 "" H 4145 3385 50  0001 C CNN
+F 3 "" H 4145 3385 50  0001 C CNN
+	1    4145 3385
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gencon:CONN_1 CON7
+U 1 1 5DCEB25E
+P 4540 3385
+F 0 "CON7" V 4790 3285 60  0000 L CNN
+F 1 "(ALT)15BrownLeftA_pin9" H 4165 3235 60  0000 L CNN
+F 2 "" H 4540 3385 50  0001 C CNN
+F 3 "" H 4540 3385 50  0001 C CNN
+	1    4540 3385
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4540 3785 4540 4460
+Text Notes 1820 6335 0    50   ~ 0
+F2
+Text Notes 2570 6360 0    50   ~ 0
+F3
+Text Notes 3070 6360 0    50   ~ 0
+F10
+Text Notes 3570 6335 0    50   ~ 0
+F11
+Text Notes 4045 6335 0    50   ~ 0
+F111
+Text Label 10560 4400 2    50   ~ 0
+radio_data
+Text Label 10560 4500 2    50   ~ 0
+radio_clk
+Text Label 10560 4600 2    50   ~ 0
+radio_ena
+Text Label 10560 4300 2    50   ~ 0
+fis_ena
+Text Label 10560 4050 2    50   ~ 0
+fis_clk
+Text Label 10560 3950 2    50   ~ 0
+fis_data
+Wire Wire Line
+	10010 3750 10560 3750
+Text Label 10560 3750 2    50   ~ 0
+TRUNK
+Text Label 6865 4000 0    50   ~ 0
+DRIVER
+Text Label 6865 4100 0    50   ~ 0
+PASSANGER
+Text Label 6865 4200 0    50   ~ 0
+REAR_LEFT
+Text Label 6865 4300 0    50   ~ 0
+REAR_RIGHT
+Text Label 10560 3850 2    50   ~ 0
+toUPPER
+Text Label 6870 3900 0    50   ~ 0
+MODEL
+Text Label 6870 3800 0    50   ~ 0
+outMode
+Wire Wire Line
+	2970 4835 5195 4835
+Wire Wire Line
+	3470 5135 5195 5135
+Wire Wire Line
+	3970 5610 5170 5610
+Wire Wire Line
+	4145 4110 5195 4110
+Connection ~ 4540 4460
+Wire Wire Line
+	4540 4460 2470 4460
+Wire Wire Line
+	4540 4460 5195 4460
+$Comp
+L diode:DIODE D6
+U 1 1 5DCEB260
+P 7630 4000
+F 0 "D6" H 7415 4410 60  0000 L CNN
+F 1 "1N5822" H 7665 4410 60  0000 L CNN
+F 2 "" H 7630 4000 50  0001 C CNN
+F 3 "" H 7630 4000 50  0001 C CNN
+	1    7630 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L diode:DIODE D7
+U 1 1 5DD24D49
+P 7630 4100
+F 0 "D7" H 7415 4510 60  0000 L CNN
+F 1 "1N5822" H 7665 4510 60  0000 L CNN
+F 2 "" H 7630 4100 50  0001 C CNN
+F 3 "" H 7630 4100 50  0001 C CNN
+	1    7630 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L diode:DIODE D8
+U 1 1 5DCE6B6B
+P 7630 4200
+F 0 "D8" H 7415 4610 60  0000 L CNN
+F 1 "1N5822" H 7665 4610 60  0000 L CNN
+F 2 "" H 7630 4200 50  0001 C CNN
+F 3 "" H 7630 4200 50  0001 C CNN
+	1    7630 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L diode:DIODE D9
+U 1 1 5DCE6FEA
+P 7630 4300
+F 0 "D9" H 7415 4710 60  0000 L CNN
+F 1 "1N5822" H 7665 4710 60  0000 L CNN
+F 2 "" H 7630 4300 50  0001 C CNN
+F 3 "" H 7630 4300 50  0001 C CNN
+	1    7630 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6865 4300 7430 4300
+Wire Wire Line
+	6865 4200 7430 4200
+Wire Wire Line
+	6865 4100 7430 4100
+Wire Wire Line
+	6865 4000 7430 4000
+Wire Wire Line
+	7830 4000 8090 4000
+Wire Wire Line
+	8090 4100 7830 4100
+Wire Wire Line
+	7830 4200 8090 4200
+Wire Wire Line
+	7830 4300 8090 4300
+$Comp
+L diode:DIODE D10
+U 1 1 5DCE7567
+P 9810 3750
+F 0 "D10" H 9780 4040 60  0000 L CNN
+F 1 "1N5822" H 9660 3890 60  0000 L CNN
+F 2 "" H 9810 3750 50  0001 C CNN
+F 3 "" H 9810 3750 50  0001 C CNN
+	1    9810 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9610 3750 9490 3750
+Text Label 9270 1260 0    50   ~ 0
+MODEL
+Text Label 9270 970  0    50   ~ 0
+outMode
+Text Label 9260 1580 0    50   ~ 0
+toUPPER
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 5DCE8AA3
+P 9930 970
+F 0 "JP1" H 9930 1155 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 9930 1064 50  0000 C CNN
+F 2 "" H 9930 970 50  0001 C CNN
+F 3 "~" H 9930 970 50  0001 C CNN
+	1    9930 970 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9270 970  9830 970 
+$Comp
+L Device:Jumper_NO_Small JP2
+U 1 1 5DCE944E
+P 9930 1260
+F 0 "JP2" H 9930 1445 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 9930 1354 50  0000 C CNN
+F 2 "" H 9930 1260 50  0001 C CNN
+F 3 "~" H 9930 1260 50  0001 C CNN
+	1    9930 1260
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP3
+U 1 1 5DCE9861
+P 9930 1580
+F 0 "JP3" H 9930 1765 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 9930 1674 50  0000 C CNN
+F 2 "" H 9930 1580 50  0001 C CNN
+F 3 "~" H 9930 1580 50  0001 C CNN
+	1    9930 1580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9260 1580 9830 1580
+Wire Wire Line
+	9270 1260 9830 1260
+Wire Wire Line
+	10030 970  10430 970 
+Wire Wire Line
+	10430 1580 10030 1580
+Wire Wire Line
+	10030 1260 10430 1260
+Wire Wire Line
+	10430 1580 10430 1750
+Connection ~ 10430 1580
+Wire Wire Line
+	8640 2850 8640 2590
+Wire Wire Line
+	8640 2590 7850 2590
+Text Label 7850 2590 0    50   ~ 0
++12V_switched
+$Comp
+L power:GND #PWR06
+U 1 1 5DCEA527
+P 10430 1750
+F 0 "#PWR06" H 10430 1500 50  0001 C CNN
+F 1 "GND" H 10435 1577 50  0000 C CNN
+F 2 "" H 10430 1750 50  0001 C CNN
+F 3 "" H 10430 1750 50  0001 C CNN
+	1    10430 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6870 3800 8090 3800
+Wire Wire Line
+	6870 3900 8090 3900
+Wire Wire Line
+	9490 3850 10560 3850
+Wire Wire Line
+	9490 3950 10560 3950
+Wire Wire Line
+	9490 4050 10560 4050
+Wire Wire Line
+	9490 4300 10560 4300
+Wire Wire Line
+	9490 4400 10560 4400
+Wire Wire Line
+	9490 4500 10560 4500
+Wire Wire Line
+	9490 4600 10560 4600
+Wire Wire Line
+	10430 1260 10430 1580
+Connection ~ 10430 1260
+Wire Wire Line
+	10430 970  10430 1260
+$EndSCHEMATC
