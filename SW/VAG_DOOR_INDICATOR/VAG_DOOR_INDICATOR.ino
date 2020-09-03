@@ -1,4 +1,59 @@
- #include <VAGFISReader.h>
+
+/*
+ *  door indicator for full fis clusters in VAG cars (priot CAN-BUS, but some can be switched to 3LB protocol)
+ *  required libraries:
+ *  https://github.com/tomaskovacik/VAGFISWriter
+ *  https://github.com/tomaskovacik/VAGFISReader
+ *  
+ * 
+ * connection to radio:
+ * arduino pin | radio pin of 20pin connector
+ *          D2 | pin 10 (on sticker marked as ENA)
+ *          D3 | pin  8 (on sticker marked as CLK)
+ *          D4 | pin  9 (on sticker marked as DATA)
+ *
+ * connection to cluster:
+ * arduino pin | cluster pin of 20pin connector (a4 b5 cluster before canbus - analog clock)
+ *          D7 | 15 
+ *          D8 | 12
+ *          D9 | 13
+ *
+ * For audi a4 b5 can-bus clusters comunication over 3lb  (data,clk,enable) need to be enabled via daignostic tool 
+ * based on this post: https://www.audi-sport.net/xf/threads/rns-e-coding.199863/
+ * With VCDS go into 17 (Instrument cluster) -> Adaptation -> Function 10 -> Channel 62
+ * 
+ * 
+ * The options are
+ * +01 - Radio
+ * +02 - Telefon
+ * +04 - Navigation
+ * +08 - Telematics
+ * +16 - Instrument Cluster
+ * To add navigation, add +4 to the current value. 
+ * 
+ * so add +4 in channel 62 will enable 3lb,
+ * then +16 in coding will enable navigation protocol (without 16 in soft coding will enable only radio text messages), but all this need to be tested!
+ * 
+ * arduino pin | cluster pin of 32pin grey connector (a4 b5 cluster with can-bus - digital clock) 
+ *          D7 | 11 
+ *          D8 | 12
+ *          D9 | 13
+ *
+ *-----------------------------------------------------------------------------------
+ * to enable forced conversion from lower to upper case ground pin D10  of arduino
+ *-----------------------------------------------------------------------------------
+ * to change model from sedan to avant groung pin A0 of arduino
+ *-----------------------------------------------------------------------------------
+ * doors inputs are as follows:
+ * A1 - front left door
+ * A2 - front right door
+ * A3 - rear left door
+ * A4 - rear right door
+ * A5 - trunk
+ * 
+ */
+
+#include <VAGFISReader.h>
 #include <VAGFISWriter.h>
 #include "bitmaps.h"
 
@@ -21,8 +76,8 @@
 
 #define SEDAN 0
 #define AVANT 1
-#define RADIO 0
-#define NAVI 1
+//#define RADIO 0
+//#define NAVI 1
 #define OPENED 0
 #define CLOSED 1
 
@@ -31,7 +86,8 @@ VAGFISWriter radio_write(RADIOOUT_CLK, RADIOOUT_DATA, RADIOOUT_ENA);
 long last_update = 0;
 char radioData[16];
 bool model = AVANT;
-bool mode = NAVI;
+//bool mode = NAVI;
+bool to_upper = 0;
 
 bool displayedCAR = 0;
 bool displayedFL = 0;
@@ -96,8 +152,8 @@ void draw_trunk() {
 void setup() {
   radio_read.begin();
   radio_write.begin();
-//  pinMode(TOUPPER, INPUT_PULLUP);
-//  pinMode(MODE, INPUT_PULLUP);
+  pinMode(TOUPPER, INPUT_PULLUP);
+  //pinMode(MODE, INPUT_PULLUP);
   pinMode(MODEL, INPUT_PULLUP);
   pinMode(DOOR_FRONT_LEFT, INPUT_PULLUP);
   pinMode(DOOR_FRONT_RIGHT, INPUT_PULLUP);
@@ -105,7 +161,8 @@ void setup() {
   pinMode(DOOR_REAR_RIGHT, INPUT_PULLUP);
   pinMode(DOOR_TRUNK, INPUT_PULLUP);
   model = digitalRead(MODEL);
- // mode = digitalRead(MODE);
+  //mode = digitalRead(MODE);
+  to_upper = digitalRead(TOUPPER);
  // if (mode == NAVI) {
     radio_write.reset();
     //  delay(1000);
@@ -127,11 +184,11 @@ void loop() {
         for (uint8_t i = 3; i < radio_read.getSize() - 1; i++) { //1st byte is msg ID, second one is packet size,3th is second msg id (sort of) last is checksumm so we skip them
           tmp = radio_read.readData(i);
           //always do conversions if chars are in lower case
-          //if (digitalRead(TOUPPER)) //DO CONVERSION TO UPPER CASE
-          //{
+          if (to_upper) //DO CONVERSION TO UPPER CASE
+          {
             if ( tmp > 96 && tmp < 123) // a = 97, Z = 122 , other chars are ommited
               tmp = tmp - 'a' + 'A';
-          //}
+          }
           radioData[i] = tmp;
         }
       }
@@ -146,10 +203,11 @@ void loop() {
       char tmp;
       for (uint8_t i = 0; i < 16; i++) { //1st byte is msg ID, last is checksumm
         tmp = radio_read.readData(1 + i);
-        if (!digitalRead(TOUPPER)) //DO CONVERSION TO UPPER CASE
+        if (to_upper) //DO CONVERSION TO UPPER CASE
         {
-          if ( tmp > 96 && tmp < 123) // a = 97, Z = 122 , other chars are ommited
-            tmp = tmp - 'a' + 'A';
+          toupper(tmp);
+/*          if ( tmp > 96 && tmp < 123) // a = 97, Z = 122 , other chars are ommited
+            tmp = tmp - 'a' + 'A';*/
         }
         radioData[i] = tmp;
       }
