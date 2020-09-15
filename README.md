@@ -1,4 +1,4 @@
-This repository holds all hardware and software part for module which retrofits functionality of indication of opened doors on cluster display on VAG cars (only full version display)
+This repository holds all hardware and software part for module which retrofits functionality of indication of opened doors on cluster display on VAG cars (only full display version)
 
 <img src="https://raw.githubusercontent.com/tomaskovacik/vag_door_indicator/master/Example.png?token=ABBFEYHW7Z4TMMCPZMBLWDK7JQABC">
 
