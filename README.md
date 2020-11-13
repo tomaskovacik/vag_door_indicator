@@ -37,3 +37,8 @@ Diodes on inputs are used as protection against accidential applying of 12V (sim
 
 Module is using navigation mode to display pictures using <a href="https://github.com/tomaskovacik/VAGFISWriter">VAGFISWriter</a> library, because of this, clasic radion protocol is not functional anymore and stations are will not be displayed on cluster. The module is using <a href="https://github.com/tomaskovacik/VAGFISReader">VAGFISReader</a> library to read data from radio and translating them into navigation protocol.  More about these protocols on <a href="https://github.com/tomaskovacik/vag_door_indicator/wiki/Theory-of-operation">this wiki page</a>. Even more in <a href="https://github.com/tomaskovacik/VAGFISWriter/blob/master/src/VAGFISWriter.cpp">this source code</a>.
 
+# Built module
+
+You can buy one on my [Tindie store](https://www.tindie.com/products/tomaskovacik/indicator-of-opened-door-for-vag-cars/).
+
+<a href="https://www.tindie.com/stores/tomaskovacik/?ref=offsite_badges&utm_source=sellers_tomaskovacik&utm_medium=badges&utm_campaign=badge_large"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-larges.png" alt="I sell on Tindie" width="200" height="104"></a>
