@@ -1,5 +1,6 @@
 This repository holds all hardware and software part for module which retrofits functionality of indication of opened doors on cluster display on VAG cars (only full display version)
 
+[<img src="https://img.youtube.com/vi/3qPJ0FZOTXo/maxresdefault.jpg"/>](https://www.youtube.com/embed/3qPJ0FZOTXo )
 <img src="https://raw.githubusercontent.com/tomaskovacik/vag_door_indicator/master/Example.png?token=ABBFEYHW7Z4TMMCPZMBLWDK7JQABC">
 
 # SW requirements
@@ -35,7 +36,7 @@ Diodes on inputs are used as protection against accidential applying of 12V (sim
  
 # Comunication protocol with cluster
 
-Module is using navigation mode to display pictures using <a href="https://github.com/tomaskovacik/VAGFISWriter">VAGFISWriter</a> library, because of this, clasic radion protocol is not functional anymore and stations are will not be displayed on cluster. The module is using <a href="https://github.com/tomaskovacik/VAGFISReader">VAGFISReader</a> library to read data from radio and translating them into navigation protocol.  More about these protocols on <a href="https://github.com/tomaskovacik/vag_door_indicator/wiki/Theory-of-operation">this wiki page</a>. Even more in <a href="https://github.com/tomaskovacik/VAGFISWriter/blob/master/src/VAGFISWriter.cpp">this source code</a>.
+Module is using navigation mode to display pictures using [VAGFISWriter](https://github.com/tomaskovacik/VAGFISWriter) library, because of this, clasic radion protocol is not functional anymore and stations are will not be displayed on cluster. The module is using [VAGFISReader](https://github.com/tomaskovacik/VAGFISReader) library to read data from radio and translating them into navigation protocol.  More about these protocols on [this wiki page](https://github.com/tomaskovacik/vag_door_indicator/wiki/Theory-of-operation). Even more in <a href="https://github.com/tomaskovacik/VAGFISWriter/blob/master/src/VAGFISWriter.cpp">this source code</a>.
 
 # Built module
 
