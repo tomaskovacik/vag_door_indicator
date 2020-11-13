@@ -1,7 +1,7 @@
 This repository holds all hardware and software part for module which retrofits functionality of indication of opened doors on cluster display on VAG cars (only full display version)
 
-[<img src="https://img.youtube.com/vi/3qPJ0FZOTXo/maxresdefault.jpg"/>](https://www.youtube.com/embed/3qPJ0FZOTXo )
-<img src="https://raw.githubusercontent.com/tomaskovacik/vag_door_indicator/master/Example.png?token=ABBFEYHW7Z4TMMCPZMBLWDK7JQABC">
+[<img src="https://raw.githubusercontent.com/tomaskovacik/vag_door_indicator/master/Example.png"/>](https://www.youtube.com/embed/3qPJ0FZOTXo )
+
 
 # SW requirements
  - arduino IDE
