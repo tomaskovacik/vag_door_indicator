@@ -20,7 +20,7 @@ Diodes on inputs are used as protection against accidential applying of 12V (sim
 
 - black and white bitmat 64x88 (WxH) pixels
 - convert it to C array using this site: https://www.digole.com/tools/PicturetoC_Hex_converter.php
-- copy X array into b5f_orezana varialble in bitmaps.h file, compile upload
+- copy C array into b5f_orezana varialble in bitmaps.h file, compile upload
 
 # Avant / Sedan picture
 
