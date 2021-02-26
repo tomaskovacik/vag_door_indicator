@@ -68,7 +68,7 @@
 #define TOUPPER 10
 //#define MODE  // 0 = radio, 1 = navi
 #define MODEL A0 // 0 = avant, 1 = sedan
-#define DOOR_FRONT_LEFT A1 // 0 = opened, 1 = closed
+#define DOOR_FRONT_LEFT 12 // 0 = opened, 1 = closed
 #define DOOR_FRONT_RIGHT A2 // 0 = opened, 1 = closed
 #define DOOR_REAR_LEFT A3 // 0 = opened, 1 = closed
 #define DOOR_REAR_RIGHT A4 // 0 = opened, 1 = closed
@@ -88,6 +88,7 @@ char radioData[16];
 bool model = AVANT;
 //bool mode = NAVI;
 bool to_upper = 0;
+bool logo = 0;
 
 bool displayedCAR = 0;
 bool displayedFL = 0;
@@ -98,15 +99,15 @@ bool displayedTRUNK = 0;
 
 void draw_car(void) {
   if (displayedCAR) return;
-  radio_write.reset();
+  //radio_write.reset();
   //delay(100);
   radio_write.initMiddleScreen();
   //delay(100);
-  //if (model == SEDAN) {
-  //  radio_write.GraphicFromArray_P(22, 1, 20, 46, sedan, 2);
-  //} else { // avant
+  if (model == SEDAN) {
+    radio_write.GraphicFromArray(22, 1, 20, 46, sedan, 2);
+  } else { // avant
   radio_write.GraphicFromArray(22, 1, 20, 46, avant, 2);
-  //}
+  }
   displayedCAR = 1;
   delay(100);
 }
@@ -160,23 +161,23 @@ void setup() {
   pinMode(DOOR_REAR_LEFT, INPUT_PULLUP);
   pinMode(DOOR_REAR_RIGHT, INPUT_PULLUP);
   pinMode(DOOR_TRUNK, INPUT_PULLUP);
-  model = digitalRead(MODEL);
+  model = digitalRead(MODEL); //0 sedan,1avant(default)
   //mode = digitalRead(MODE);
-  to_upper = digitalRead(TOUPPER);
- // if (mode == NAVI) {
+  //to_upper = digitalRead(TOUPPER);
+  if (logo) {
     radio_write.reset();
-    //  delay(1000);
+    delay(1000);
     radio_write.initFullScreen();
-    //delay(1000);
+    delay(1000);
     radio_write.GraphicFromArray(0, 0, 64, 88, b5f_orezana, 2);
     delay(3000);
-  //}
+  }
   radio_write.reset();
 }
 
 void loop() {
   if (radio_read.hasNewMsg()) {
-    if (!radio_read.msgIsNavi()) {
+    if (radio_read.msgIsNavi()) {
       // Navi text
       if (radio_read.msgIsRadioText()) {
         //radio msg(upper 2lines) in navi mode
@@ -214,6 +215,7 @@ void loop() {
 //      if (mode == NAVI) {
         delay(10);
         radio_write.sendMsg(radioData);
+
 //      } else {
 //        radio_write.sendRadioMsg(radioData);
 //      }
@@ -284,6 +286,7 @@ void loop() {
   if (displayedCAR && !displayedFL && !displayedFR && !displayedRL && !displayedRR && !displayedTRUNK)
   {
     radio_write.reset();
+    if (!radio_write.sendMsg(radioData)) Serial.println(F("send navi msg failed!"));
     displayedCAR = 0;
   }
 
