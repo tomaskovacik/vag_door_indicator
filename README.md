@@ -5,7 +5,7 @@ This repository holds all hardware and software part for module which retrofits 
 
 # SW requirements
  - arduino IDE
- - arduino library for reading messages from radio in 3LB protocol in radio mode: https://github.com/tomaskovacik/VAGFISReader
+ - arduino library for reading messages from radio in 3LB protocol in radio mode: https://github.com/tomaskovacik/VAGFISReader (only needed if you have stock radio)
  - arduino library for writing to VAG cluster over 3LB in navigation mode: https://github.com/tomaskovacik/VAGFISWriter
  - arduino sketch: https://github.com/tomaskovacik/vag_door_indicator/tree/master/SW/VAG_DOOR_INDICATOR
 
