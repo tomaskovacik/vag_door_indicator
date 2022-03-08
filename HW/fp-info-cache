@@ -8,35 +8,35 @@ SC-70-6,
 6
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SC-70-6_Handsoldering
-SC-70-6,{space}Handsoldering,
-SC-70-6,{space}Handsoldering,
+SC-70-6, Handsoldering,
+SC-70-6, Handsoldering,
 0
 6
 6
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-23
-SOT-23,{space}Standard
+SOT-23, Standard
 SOT-23
 0
 3
 3
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-23-5
-5-pin{space}SOT23{space}package
+5-pin SOT23 package
 SOT-23-5
 0
 5
 5
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-23-6
-6-pin{space}SOT-23{space}package
+6-pin SOT-23 package
 SOT-23-6
 0
 6
 6
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-23_Handsoldering
-SOT-23,{space}Handsoldering
+SOT-23, Handsoldering
 SOT-23
 0
 3
@@ -50,35 +50,35 @@ SOT-143
 4
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-143R_Reverse
-SOT-143R,{space}Reverse
-SOT-143R,{space}Reverse
+SOT-143R, Reverse
+SOT-143R, Reverse
 0
 4
 4
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-143R_Reverse_Handsoldering
-SOT-143R,{space}Reverse,{space}Handsoldering,
-SOT-143,{space}Reverse,{space}Handsoldering,
+SOT-143R, Reverse, Handsoldering,
+SOT-143, Reverse, Handsoldering,
 0
 4
 4
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 SOT-143_Handsoldering
-SOT-143,{space}Handsoldering
-SOT-143,{space}Handsoldering
+SOT-143, Handsoldering
+SOT-143, Handsoldering
 0
 4
 4
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 TSOT-6-MK06A
-TSOP-6{space}MK06A{space}housing{space}6pin
+TSOP-6 MK06A housing 6pin
 
 0
 6
 6
 Housings_SOT-23_SOT-143_TSOT-6.pretty
 TSOT-6-MK06A_Handsoldering
-TSOP-6{space}MK06A{space}housing{space}6pin
+TSOP-6 MK06A housing 6pin
 
 0
 6
