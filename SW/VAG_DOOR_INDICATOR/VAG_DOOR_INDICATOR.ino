@@ -68,7 +68,7 @@
 #define TOUPPER 10
 //#define MODE  // 0 = radio, 1 = navi
 #define MODEL A0 // 0 = avant, 1 = sedan
-#define DOOR_FRONT_LEFT 12 // 0 = opened, 1 = closed
+#define DOOR_FRONT_LEFT A1 // 0 = opened, 1 = closed
 #define DOOR_FRONT_RIGHT A2 // 0 = opened, 1 = closed
 #define DOOR_REAR_LEFT A3 // 0 = opened, 1 = closed
 #define DOOR_REAR_RIGHT A4 // 0 = opened, 1 = closed
@@ -142,11 +142,11 @@ void rr() {
 
 void draw_trunk() {
   if (displayedTRUNK) return;
-  //if (model == AVANT) {
-  //      radio_write.GraphicFromArray_P(25, 41, 14, 4, avant_trunc, 1);
-  //  } else {
+  if (model == AVANT) {
+        radio_write.GraphicFromArray(25, 41, 14, 4, avant_trunc, 1);
+    } else {
   radio_write.GraphicFromArray(23, 38, 18, 7, sedan_trunc, 1);
-  //}
+  }
   displayedTRUNK = 1;
 }
 
